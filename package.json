@@ -1,0 +1,61 @@
+{
+  "name": "feedbackform.client",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build:development": "vue-cli-service build --mode development --inline-vue",
+    "build:staging": "vue-cli-service build --mode staging --inline-vue",
+    "build:production": "vue-cli-service build --inline-vue",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@hapi/hoek": "^8.5.1",
+    "axios": "^0.19.2",
+    "core-js": "^3.6.4",
+    "document-register-element": "^1.14.3",
+    "vee-validate": "^3.2.5",
+    "vue": "^2.6.10",
+    "vue-axios": "^2.1.5",
+    "vue-custom-element": "^3.2.12",
+    "vue-i18n": "^8.15.4"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.8.3",
+    "@kazupon/vue-i18n-loader": "^0.5.0",
+    "@vue/cli-plugin-babel": "^4.1.0",
+    "@vue/cli-plugin-eslint": "^4.1.0",
+    "@vue/cli-service": "^4.1.0",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-vue": "^6.1.2",
+    "vue-loader": "^15.8.3",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "description": "## Project setup ``` npm install ```",
+  "main": "babel.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
