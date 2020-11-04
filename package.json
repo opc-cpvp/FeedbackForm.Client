@@ -8,7 +8,7 @@
     "build:staging": "vue-cli-service build --mode staging --inline-vue",
     "build:production": "vue-cli-service build --inline-vue",
     "lint": "vue-cli-service lint",
-    "prepare": "npm run build:staging && npm run build:production"
+    "prepare": "npm run build:staging"
   },
   "dependencies": {
     "@hapi/hoek": "^8.5.1",
