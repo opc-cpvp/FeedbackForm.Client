@@ -24,5 +24,6 @@ module.exports = {
     extract: {
       filename: 'feedback.css'
     }
-  }
+  },
+  outputDir: `dist/${process.env.NODE_ENV}`
 };
