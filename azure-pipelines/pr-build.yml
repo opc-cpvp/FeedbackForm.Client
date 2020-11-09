@@ -15,10 +15,7 @@ pr:
       - src/*
 
 pool:
-  vmImage: "ubuntu-latest"
-
-variables:
-  system.debug: false
+  vmImage: "windows-2019"
 
 steps:
   - task: NodeTool@0
