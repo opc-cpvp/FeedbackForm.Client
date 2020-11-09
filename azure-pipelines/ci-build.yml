@@ -39,10 +39,10 @@ steps:
       customCommand: "run build:production"
 
   - task: CopyFiles@2
-    displayName: "Copy Files to: $(Build.ArtifactStagingDirectory)"
+    displayName: "Copy Files to: $(Build.ArtifactStagingDirectory)\\dist"
     inputs:
-      SourceFolder: "$(System.DefaultWorkingDirectory)"
-      Contents: 'dist\**'
+      SourceFolder: "$(System.DefaultWorkingDirectory)\\dist"
+      Contents: '**'
       TargetFolder: "$(Build.ArtifactStagingDirectory)"
 
   - task: OneLuckiDev.json2variable.vsts-json-to-variable.oneLuckiDevJson2Variable@1
@@ -60,7 +60,7 @@ steps:
       target: '$(Build.SourceVersion)'
       tagSource: 'userSpecifiedTag'
       tag: 'v$(version)'
-      assets: '$(Build.ArtifactStagingDirectory)/**'
+      assets: '$(Build.ArtifactStagingDirectory)/*'
       changeLogCompareToRelease: 'lastFullRelease'
       changeLogType: 'commitBased'
     condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
