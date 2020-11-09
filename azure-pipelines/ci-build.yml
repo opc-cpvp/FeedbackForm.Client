@@ -17,9 +17,6 @@ pr: none
 pool:
   vmImage: "windows-2019"
 
-variables:
-  system.debug: false
-
 steps:
   - task: NodeTool@0
     displayName: "Use Node 10.x"
