@@ -9,7 +9,7 @@
           <form @submit.prevent="handleSubmit(onSubmit)">
             <fieldset id="reportAProblemInputs">
               <legend class="required">
-                <span class="field-name">{{ $t("form.selectOptions") }}</span>
+                <span class="field-name">{{ $t("form.selectOptions") }} </span>
                 <strong class="required">({{ $t("form.required") }})</strong>:
               </legend>
               <validation-provider
