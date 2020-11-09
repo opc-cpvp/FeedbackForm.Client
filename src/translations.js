@@ -10,7 +10,7 @@ const messages = {
     },
     veeValidate: {
       validation: en.messages,
-    }, 
+    },
     validation: {
       optionRequired: "An option is required",
       max750characters: "Comments can be at most 750 characters"
@@ -28,10 +28,10 @@ const messages = {
       opcContactLink: "/en/contact-the-opc/",
       contactOpc: "contact the Office of the Privacy Commissioner",
       noReply: "You will not receive a reply"
-    },  
+    },
     errors: {
       invalidRequest: "An invalid request was made, please try again.",
-      somethingWentWrong: "Something went wront, please try again later."
+      somethingWentWrong: "Something went wrong, please try again later."
     }
   },
   fr: {
@@ -42,10 +42,10 @@ const messages = {
     },
     veeValidate: {
       validation: fr.messages,
-    },   
+    },
     validation: {
-      optionRequired : "La sélection d'une option est obligatoire",
-      max750characters : "Les commentaires ont un maximum de 750 charactères"
+      optionRequired: "La sélection d'une option est obligatoire",
+      max750characters: "Les commentaires ont un maximum de 750 charactères"
     },
     form: {
       required: "obligatoire",
@@ -65,7 +65,7 @@ const messages = {
     errors: {
       invalidRequest: "Une requête invalide a été effectuée. Veuillez essayer de nouveau.",
       somethingWentWrong: "Une erreur est survenue, s'il vous plait réessayer de nouveau plus tard."
-    }   
+    }
   }
 }
 

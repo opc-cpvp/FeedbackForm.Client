@@ -129,6 +129,11 @@ export default {
       type: Number,
       default: null,
     },
+    feedbackApi: {
+      type: String,
+      default: null,
+      required: false,
+    },
     versionId: {
       type: String,
       default: null,
@@ -150,8 +155,10 @@ export default {
       this.feedback.versionId = this.versionId;
       this.feedback.url = window.location.href;
 
+      const apiUrl = this.feedbackApi || process.env.VUE_APP_FEEDBACK_API;
+
       axios
-        .post(process.env.VUE_APP_FEEDBACK_API, this.feedback)
+        .post(apiUrl, this.feedback)
         .then((response) => {
           this.showForm = false;
           this.submitSuccessful = true;

@@ -16,7 +16,7 @@ Vue.use(VueAxios, axios)
 Vue.use(VueCustomElement)
 
 Vue.customElement('feedback-element', FeedbackElement, {
-  beforeCreateVueInstance(RootComponentDefinition){
+  beforeCreateVueInstance(RootComponentDefinition) {
     // Set locale globally on the component
     RootComponentDefinition.i18n = i18n;
     return RootComponentDefinition

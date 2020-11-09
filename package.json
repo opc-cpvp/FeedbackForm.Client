@@ -4,10 +4,11 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build:development": "vue-cli-service build --mode development --inline-vue",
+    "build": "vue-cli-service build --mode development --inline-vue",
     "build:staging": "vue-cli-service build --mode staging --inline-vue",
     "build:production": "vue-cli-service build --inline-vue",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "prepare": "npm run build:production"
   },
   "dependencies": {
     "@hapi/hoek": "^8.5.1",
