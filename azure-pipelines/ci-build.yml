@@ -42,7 +42,7 @@ steps:
     displayName: "Copy Files to: $(Build.ArtifactStagingDirectory)"
     inputs:
       SourceFolder: "$(System.DefaultWorkingDirectory)"
-      Contents: 'dist\*'
+      Contents: 'dist/*'
       TargetFolder: "$(Build.ArtifactStagingDirectory)"
 
   - task: OneLuckiDev.json2variable.vsts-json-to-variable.oneLuckiDevJson2Variable@1
