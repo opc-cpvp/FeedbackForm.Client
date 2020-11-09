@@ -10,7 +10,6 @@ module.exports = {
     optimization: {
       splitChunks: false
     },
-    mode: 'none',
     module: {
       rules: [
         {
