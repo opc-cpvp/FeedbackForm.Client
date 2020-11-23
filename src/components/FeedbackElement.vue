@@ -57,7 +57,7 @@ export default {
   },
   methods:{
     getMeta: function(metaName){
-      const metaTag = document.querySelector('meta[name="' + metaName + '"]');
+      const metaTag = document.querySelector(`meta[name="${metaName}"]`);
       if(metaTag){
         return metaTag.content;
       }
