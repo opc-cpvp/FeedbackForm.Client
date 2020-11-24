@@ -3,10 +3,14 @@
     <feedback-helpful
       v-if="this.feedbackType === 'helpful'"
       :feedbackApi="this.feedbackApi"
+      :contentId="this.contentId"
+      :versionId="this.versionId"
     />
     <feedback-problem
       v-if="this.feedbackType === 'problem'"
       :feedbackApi="this.feedbackApi"
+      :contentId="this.contentId"
+      :versionId="this.versionId"
     />
   </div>
 </template>
@@ -19,6 +23,12 @@ export default {
   components: {
     FeedbackHelpful,
     FeedbackProblem,
+  },
+  data: function(){
+    return {
+      contentId: null,
+      versionId: null
+    }
   },
   props: {
     feedbackApi: {
@@ -41,6 +51,18 @@ export default {
   },
   created: function () {
     this.$i18n.locale = this.locale;
+    this.contentId = this.getMeta('pageContentId');
+    this.versionId = this.getMeta('pageVersionId');
+
   },
+  methods:{
+    getMeta: function(metaName){
+      const metaTag = document.querySelector(`meta[name="${metaName}"]`);
+      if(metaTag){
+        return metaTag.content;
+      }
+      return null;     
+    },
+  }   
 };
 </script>
