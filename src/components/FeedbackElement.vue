@@ -51,7 +51,7 @@ export default {
   },
   created: function () {
     this.$i18n.locale = this.locale;
-    this.contentId = this.getMeta('pageContentId');
+    this.contentId = Number(this.getMeta('pageContentId'));
     this.versionId = this.getMeta('pageVersionId');
 
   },
