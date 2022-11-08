@@ -1,52 +1,67 @@
 <template>
-<div class="checkbox">
-    <label :for="labelFor">
-        <input :id="id" :value="checkedValue" type="checkbox" :checked="verifyIfChecked" @change="updateInput">
-        <slot></slot>
-    </label>
-    </div>
+	<div class="checkbox">
+		<label :for="labelFor">
+			<input 
+				:id="labelFor"
+				:name="name"
+				type="checkbox"
+				:checked="checked" 
+				@change="handleChange(value)"
+			>
+			<slot></slot>
+		</label>
+	</div>
 </template>
+    
+<script setup>
+import { useField } from "vee-validate";
+import { onMounted, toRefs, watch } from "vue";
 
-<script>
-export default {
-    name: 'CheckboxItem',
-    model: {
-        prop: 'modelValue',
-        event: 'change'
-    },
-    props: {
-        id: {
-            type: String,
-            default: ''
-        },
-        labelFor: {
-            type: String,
-            default: ''
-        },
-        checkedValue: {
-            type: String,
-            default: ''
-        },
-        modelValue: {
-            default: false
-        }
-    },
-    computed: {
-        verifyIfChecked() {
-            return this.modelValue.includes(this.checkedValue);               
-        }
-    },
-    methods: {
-        updateInput: function(event) {
-            let isChecked = event.target.checked;
-            let newValue = [...this.modelValue];
-            if (isChecked) {
-                newValue.push(this.checkedValue);
-            } else {
-                newValue.splice(newValue.indexOf(this.checkedValue), 1);
-            }
-            this.$emit('change', newValue);
-        }
-    }
-}
+const props = defineProps({
+	labelFor: {
+		type: String,
+		default: ''
+	},
+	name: {
+		type: String,
+		default: ''
+	},
+	value: {
+		type: String,
+		required: true,
+	},
+	isReset: {
+		type: Boolean,
+		default: false
+	},
+	rules: {
+		type: Object,
+		default: undefined
+	}
+});
+  
+const emit = defineEmits(["resetCompleted", "hasError"]);
+
+const { name, isReset } = toRefs(props);
+
+const { checked, handleChange, resetField } = useField(name, props.rules, {
+	type: 'checkbox',
+	checkedValue: props.value,
+});
+
+watch(isReset, () => {
+	onReset();
+});
+
+onMounted(() => {
+	onReset();
+});
+
+const onReset = () => {
+	if(isReset.value){
+		resetField();
+		emit("resetCompleted");
+	}
+};
+    
 </script>

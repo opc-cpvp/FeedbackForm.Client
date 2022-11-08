@@ -1,0 +1,26 @@
+{
+  "en": {
+    "fields": {
+      "reasons": {
+        "required": "You must select at least one reason."
+      }
+    },
+    "messages": {
+      "required": "This field is required",
+      "max": "The value of the field may not be greater than 0:{max} characters",
+      "one_of": "You must select an option"
+    }
+  },
+  "fr": {
+    "fields": {
+      "reasons": {
+        "required": "Vous devez sélectionner au moins une raison."
+      }
+    },
+    "messages": {
+      "required": "Ce champ est obligatoire",
+      "max": "La valeur du champ ne peut pas dépasser 0:{max} caractères",
+      "one_of": "Vous devez sélectionner une option"
+    }
+  }
+}

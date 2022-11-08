@@ -1,0 +1,52 @@
+{
+  "pageHelpful": "Est-ce que cette information vous a été utile?",
+  "selectOne": "Veuillez sélectionner une option",
+  "yes": "Oui",
+  "no": "Non",
+  "why": "Pourquoi",
+  "provideDetails": "Veuillez préciser",
+  "infoHardToUnderstand": "L'information est difficile à comprendre",
+  "infoWrong": "L'information est erronée",
+  "infoOutdated": "L'information n'est plus à jour",
+  "infoNotFound": "Je ne trouve pas l'information que je cherche",
+  "reportProblem": "Signaler un problème ou une erreur sur cette page",
+  "brokenLinks": "Il y a des hyperliens brisés",
+  "spellingOrGrammarMistakes": "Il y a des erreurs d'orthographe ou de grammaire",
+  "infoWrongOrOutdated": "L'information est erronée ou n'est plus à jour",
+  "submissionInformation":{
+    "note": "Remarque",
+    "noPersonalInfo": "N'inscrivez aucun renseignement personnel",
+    "personalInfoItems": "comme votre nom, numéro d'assurances sociale (NAS), votre adresse au domicile ou au travail, ou encore les numéros de cas ou de dossiers",
+    "forMoreInfo": "Pour plus d'information au sujet de cette fonctionnalité",
+    "referTo": "veuillez consulter nos",
+    "termsOfUseLink": "/fr/protection-de-la-vie-privee-et-transparence-au-commissariat/conditions-d-utilisation/",
+    "termsOfUse": "conditions d'utilisation"
+  },
+  "confirmation":{
+    "thankYouForFeedback": "Merci de votre rétroaction"
+  },
+  "contact": {
+    "forEnquiries": "Pour toute question, veuillez",
+    "opcContactLink": "/fr/communiquer-avec-le-commissariat/",
+    "contactOpc": "communiquer avec le Commissariat à la protection de la vie privée",
+    "noReply": "Vous ne recevrez pas de réponse"
+  },
+  "errors": {
+    "invalidRequest": "Une requête invalide a été effectuée. Veuillez essayer de nouveau.",
+    "serverError": "Une erreur est survenue, s'il vous plait réessayer de nouveau plus tard."
+  },
+  "fields": {
+    "selectOption": "Sélectionner une option",
+    "selectAllThatApply": "Sélectionner les réponses pertinentes",
+    "comment": "Veuillez préciser"
+  },
+  "form": {
+    "required": "obligatoire",
+    "provideDetails": "Pourquoi? Veuillez préciser",
+    "max750characters": "maximum de 750 caractères",
+    "selectOptions": "Veuillez cocher toutes les réponses pertinentes",
+    "other": "Autre",
+    "specify": "Veuillez préciser",
+    "submit": "Soumettre"
+  }
+}

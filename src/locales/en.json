@@ -1,0 +1,51 @@
+{
+  "pageHelpful": "Was this page helpful?",
+  "selectOne": "Please select one",
+  "yes": "Yes",
+  "no": "No",
+  "why": "Why",
+  "provideDetails": "Please provide details",
+  "infoHardToUnderstand": "The information is hard to understand",
+  "infoWrong": "The information is wrong",
+  "infoOutdated": "The information is outdated",
+  "infoNotFound": "I can't find the information I'm looking for",
+  "reportProblem": "Report a problem or mistake on this page",
+  "brokenLinks": "There are broken links",
+  "spellingOrGrammarMistakes": "The page has spelling or grammar mistakes",
+  "infoWrongOrOutdated": "The information is wrong or outdated",
+  "submissionInformation": {
+    "note": "Note",
+    "noPersonalInfo": "Do not include any personal information",
+    "personalInfoItems": "such as your name, social insurance number (SIN), home or business address or any case or files numbers",
+    "forMoreInfo": "For more information about this tool",
+    "referTo": "please refer to our",
+    "termsOfUseLink": "/en/privacy-and-transparency-at-the-opc/terms-and-conditions-of-use/",
+    "termsOfUse": "terms and conditions of use"
+  },
+  "confirmation":{
+    "thankYouForFeedback": "Thank you for your feedback"
+  },
+  "contact": {
+    "forEnquiries": "For enquiries, please",
+    "opcContactLink": "/en/contact-the-opc/",
+    "contactOpc": "contact the Office of the Privacy Commissioner",
+    "noReply": "You will not receive a reply"
+  },  
+  "errors": {
+    "invalidRequest": "An invalid request was made, please try again.",
+    "serverError": "Something went wront, please try again later."
+  },
+  "fields": {
+    "selectOption": "Select an option",
+    "selectAllThatApply": "Select all that apply",
+    "comment": "Please specify"
+  },
+  "form": {
+    "required": "required",
+    "max750characters": "maximum 750 characters",
+    "selectOptions": "Please select all that apply",
+    "other": "Other",
+    "specify": "Please specify",
+    "submit": "Submit"
+  }
+}

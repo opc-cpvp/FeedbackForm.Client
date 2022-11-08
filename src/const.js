@@ -1,4 +1,4 @@
-export const FeedbackFields = {
+export const Reasons = {
   OTHER: "other"
 }
 

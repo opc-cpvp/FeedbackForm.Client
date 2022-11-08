@@ -2,43 +2,44 @@
   <div class="radio">
     <label :for="labelFor">
       <input
-        :id="id"
+        :id="labelFor"
         :name="name"
         type="radio"
-        @change="updateSelected"
-        :value="optionValue"
+        @change="handleChange(value)"
+        :value="value"
       />
     <slot></slot>
     </label>
   </div>
 </template>
 
-<script>
+<script setup>
+import { toRefs } from "vue";
+import { useField } from "vee-validate";
 
-export default {
-  name: 'RadioItem',
-  props: {
-    optionValue: {
-      type: [String, Number],
-      default: ''
-    },
-    labelFor: {
-      type: String,
-      default: ''
-    },
-    id: {
-      type: String,
-      default: ''
-    },
-    name: {
-      type: String,
-      default: ''
-    }
+const props = defineProps({
+  labelFor: {
+    type: String,
+    required: true,
   },
-  methods: {
-    updateSelected: function() {
-        this.$emit('input', this.optionValue);
-    }
+  value: {
+    type: String,
+    required: true,
+  },
+  name: {
+    type: String,
+    required: true
+  },
+  rules:{
+    type: Object,
+    default: undefined
   }
-}
+});
+
+const { name } = toRefs(props);
+
+const { handleChange } = useField(name, props.rules, {
+  type: "radio"
+});
+
 </script>

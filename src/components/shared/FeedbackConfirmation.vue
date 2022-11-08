@@ -14,14 +14,3 @@ export default {
   }
 }
 </script>
-
-<i18n>
-{
-  "en": {
-    "thankYouForFeedback": "Thank you for your feedback"
-  },
-  "fr": {
-    "thankYouForFeedback": "Merci de votre rétroaction"
-  }
-}
-</i18n>
