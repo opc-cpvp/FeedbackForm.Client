@@ -184,19 +184,8 @@
     reasons: []
   };
 
-  // const schema = {
-  //   isHelpful: (value) => {
-  //     if (value) {
-  //       return [Answer.YES, Answer.NO].includes(Number(value));
-  //     }
-  //   },
-  //   reasons: { required: true },
-  //   comment: { required: true, max: 3 }
-  // };
-
   const { setFieldValue, handleSubmit, errors } = useForm({
     initialValues: formValues,
-    // validationSchema: schema,
     keepValuesOnUnmount: true
   });
 
