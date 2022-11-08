@@ -185,8 +185,7 @@
   };
 
   const { setFieldValue, handleSubmit, errors } = useForm({
-    initialValues: formValues,
-    keepValuesOnUnmount: true
+    initialValues: formValues
   });
 
   const isResetComment = ref(false);
