@@ -208,7 +208,7 @@
       url: window.location.href
     };
 
-    const apiUrl = this.feedbackApi || import.meta.env.VITE_APP_FEEDBACK_API;
+    const apiUrl = props.feedbackApi || import.meta.env.VITE_APP_FEEDBACK_API;
 
     axios.post(apiUrl, feedback)
       .then(() => {
