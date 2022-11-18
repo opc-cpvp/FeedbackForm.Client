@@ -139,40 +139,36 @@
 </template>
   
   <script setup>
-  import RadioItem from "./shared/RadioItem.vue";
   import CheckboxItem from "./shared/CheckboxItem.vue";
-  import TextareaInput from "./shared/TextareaInput.vue";
   import ErrorSummary from "./shared/ErrorSummary.vue";
+  import RadioItem from "./shared/RadioItem.vue";
+  import TextareaInput from "./shared/TextareaInput.vue";
   import { Reasons, Answer } from "../const";
+  import { setupValidation } from "../validation";
   import axios from "axios";
-  import { useI18n } from "vue-i18n";
   import { setLocale } from "@vee-validate/i18n";
   import { useForm, useFormValues } from "vee-validate";
 	import { computed, ref } from "vue";
-  import { setupValidation } from "../validation";
+  import { useI18n } from "vue-i18n";
+  
 
   const { t, locale } = useI18n();
-  
   setupValidation();
   setLocale(locale.value);
 
   const props = defineProps({
-      contentId: {
-        Number,
-        default: null,
-      },
-      versionId: {
-        type: String,
-        default: null,
-      },
-      feedbackApi: {
-        type: String,
-        default: null,
-      },
-      locale: {
-        type: String,
-        default: 'en'
-      }
+    contentId: {
+      Number,
+      default: null,
+    },
+    versionId: {
+      type: String,
+      default: null,
+    },
+    feedbackApi: {
+      type: String,
+      default: null,
+    }
   });
 
   const websiteBasePath = "https://www.priv.gc.ca";
@@ -246,7 +242,6 @@
   }
   
   const unselectOther = () => setFieldValue("reasons", currentFormValues.value.reasons.filter(reason => reason !== Reasons.OTHER));
-
   const handleResetCommentCompleted = () => isResetComment.value = false;
   const handleResetReasonsCompleted = () => isResetReasons.value = false;
 
@@ -254,6 +249,7 @@
   
   <style scoped>
   @import url("https://www.priv.gc.ca/wet/gcweb-opc/css/theme.min.css");
+  @import url("https://www.priv.gc.ca/css/opc-style.css");
   
     details {
       border-color: #b31885;

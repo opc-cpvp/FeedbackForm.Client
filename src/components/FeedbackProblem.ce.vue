@@ -106,12 +106,12 @@ import CheckboxItem from "./shared/CheckboxItem.vue";
 import TextareaInput from "./shared/TextareaInput.vue";
 import ErrorSummary from "./shared/ErrorSummary.vue";
 import { Reasons, Answer } from "../const";
-import { useForm, useFormValues } from 'vee-validate';
-import { useI18n } from "vue-i18n";
-import axios from "axios";
-import { ref, computed } from "vue";
 import { setupValidation } from "../validation";
+import axios from "axios";
 import { setLocale } from "@vee-validate/i18n";
+import { useForm, useFormValues } from 'vee-validate';
+import { ref, computed } from "vue";
+import { useI18n } from "vue-i18n";
 
 const { t, locale } = useI18n();
 setupValidation();
@@ -129,16 +129,8 @@ const props = defineProps({
   feedbackApi: {
     type: String,
     default: null,
-  },
-  locale: {
-    type: String,
-    default: 'en'
   }
 });
-
-const submitSuccessful = ref(false);
-const showForm = ref(true);
-const submitError = ref("");
 
 const websiteBasePath = "https://www.priv.gc.ca";
 
@@ -156,6 +148,10 @@ const isResetComment = ref(false);
 
 // Computed ref to the form values
 const currentFormValues = useFormValues();
+
+const submitSuccessful = ref(false);
+const showForm = ref(true);
+const submitError = ref("");
 
 const onSubmit = handleSubmit(values => {
   const feedback = {
@@ -206,6 +202,7 @@ const onSubmit = handleSubmit(values => {
 
 <style scoped>
 @import url("https://www.priv.gc.ca/wet/gcweb-opc/css/theme.min.css");
+@import url("https://www.priv.gc.ca/css/opc-style.css");
 
 details summary {
   text-align: left;
