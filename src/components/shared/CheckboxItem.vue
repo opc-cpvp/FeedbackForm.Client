@@ -42,6 +42,7 @@ const props = defineProps({
   
 const emit = defineEmits(["resetCompleted", "hasError"]);
 
+// Must use `toRef` to make the checkboxes names reactive
 const { name, isReset } = toRefs(props);
 
 const { checked, handleChange, resetField } = useField(name, props.rules, {

@@ -14,8 +14,8 @@
 </template>
 
 <script setup>
-import { toRefs } from "vue";
 import { useField } from "vee-validate";
+import { toRefs } from "vue";
 
 const props = defineProps({
   labelFor: {
@@ -36,6 +36,7 @@ const props = defineProps({
   }
 });
 
+// Must use `toRef` to make the radio inputs names reactive
 const { name } = toRefs(props);
 
 const { handleChange } = useField(name, props.rules, {

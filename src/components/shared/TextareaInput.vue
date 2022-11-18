@@ -17,9 +17,8 @@
 </template>
 
 <script setup>
-
-import { toRefs, watch, onMounted } from "vue";
 import { useField } from "vee-validate";
+import { toRefs, watch, onMounted } from "vue";
 
 const props = defineProps({
 	id: {
@@ -54,6 +53,7 @@ const props = defineProps({
 
 const emit = defineEmits(["resetCompleted"]);
 
+// Must use `toRef` to make the textarea inputs names reactive
 const { name, isReset } = toRefs(props);
 const { value:inputValue, handleChange, resetField } = useField(name, props.rules);
 
