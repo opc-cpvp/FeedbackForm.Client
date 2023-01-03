@@ -22,7 +22,7 @@
     "termsOfUseLink": "/en/privacy-and-transparency-at-the-opc/terms-and-conditions-of-use/",
     "termsOfUse": "terms and conditions of use"
   },
-  "confirmation":{
+  "confirmation": {
     "thankYouForFeedback": "Thank you for your feedback"
   },
   "contact": {
@@ -30,7 +30,7 @@
     "opcContactLink": "/en/contact-the-opc/",
     "contactOpc": "contact the Office of the Privacy Commissioner",
     "noReply": "You will not receive a reply"
-  },  
+  },
   "errors": {
     "invalidRequest": "An invalid request was made, please try again.",
     "serverError": "Something went wront, please try again later."

@@ -13,7 +13,7 @@
   "brokenLinks": "Il y a des hyperliens brisés",
   "spellingOrGrammarMistakes": "Il y a des erreurs d'orthographe ou de grammaire",
   "infoWrongOrOutdated": "L'information est erronée ou n'est plus à jour",
-  "submissionInformation":{
+  "submissionInformation": {
     "note": "Remarque",
     "noPersonalInfo": "N'inscrivez aucun renseignement personnel",
     "personalInfoItems": "comme votre nom, numéro d'assurances sociale (NAS), votre adresse au domicile ou au travail, ou encore les numéros de cas ou de dossiers",
@@ -22,7 +22,7 @@
     "termsOfUseLink": "/fr/protection-de-la-vie-privee-et-transparence-au-commissariat/conditions-d-utilisation/",
     "termsOfUse": "conditions d'utilisation"
   },
-  "confirmation":{
+  "confirmation": {
     "thankYouForFeedback": "Merci de votre rétroaction"
   },
   "contact": {

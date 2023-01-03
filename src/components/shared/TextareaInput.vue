@@ -1,18 +1,10 @@
 <template>
 	<div>
-	<label :for="labelFor">
-		<slot></slot>
-	</label>
-	<textarea
-		:id="id"
-		:name="name"
-		cols="20"
-		rows="2"
-		:value="inputValue"
-		:maxLength="maxLength"
-		class="form-control"
-		@input="handleChange"
-	/>
+		<label :for="id">
+			<slot></slot>
+		</label>
+		<textarea :id="id" :name="name" :cols="cols" :rows="rows" :value="inputValue" :maxLength="maxLength"
+			class="form-control" @input="handleChange" />
 	</div>
 </template>
 
@@ -25,37 +17,41 @@ const props = defineProps({
 		type: String,
 		default: '',
 	},
-  labelFor: {
-    type: String,
-    default: '',
-  },
-	maxLength:{
-		type: Number,
-		default: 5000
-	},
-  value: {
-    type: String,
+	name: {
+		type: String,
 		default: ''
-  },
-  name: {
-    type: String,
-    default: ''
-  },
-  isReset: {
+	},
+	cols: {
+		type: Number,
+		default: 20
+	},
+	rows: {
+		type: Number,
+		default: 2
+	},
+	value: {
+		type: String,
+		default: ''
+	},
+	maxLength: {
+		type: Number,
+		default: 5
+	},
+	isReset: {
 		type: Boolean,
 		default: false
-  },
-  rules: {
+	},
+	rules: {
 		type: Object,
 		default: undefined
-  }
+	}
 });
 
 const emit = defineEmits(["resetCompleted"]);
 
 // Must use `toRef` to make the textarea inputs names reactive
 const { name, isReset } = toRefs(props);
-const { value:inputValue, handleChange, resetField } = useField(name, props.rules);
+const { value: inputValue, handleChange, resetField } = useField(name, props.rules);
 
 watch(isReset, () => {
 	onReset();
@@ -66,7 +62,7 @@ onMounted(() => {
 });
 
 const onReset = () => {
-	if(isReset.value){
+	if (isReset.value) {
 		resetField();
 		emit("resetCompleted");
 	}

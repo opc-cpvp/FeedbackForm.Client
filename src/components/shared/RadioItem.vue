@@ -1,14 +1,8 @@
 <template>
   <div class="radio">
-    <label :for="labelFor">
-      <input
-        :id="labelFor"
-        :name="name"
-        type="radio"
-        @change="handleChange(value)"
-        :value="value"
-      />
-    <slot></slot>
+    <label :for="id">
+      <input :id="id" :name="name" type="radio" @change="handleChange(value)" :value="value" />
+      <slot></slot>
     </label>
   </div>
 </template>
@@ -18,7 +12,7 @@ import { useField } from "vee-validate";
 import { toRefs } from "vue";
 
 const props = defineProps({
-  labelFor: {
+  id: {
     type: String,
     required: true,
   },
@@ -30,7 +24,7 @@ const props = defineProps({
     type: String,
     required: true
   },
-  rules:{
+  rules: {
     type: Object,
     default: undefined
   }

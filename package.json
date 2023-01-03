@@ -1,13 +1,12 @@
 {
   "name": "feedbackform.client",
-  "version": "0.1.0",
+  "version": "0.1.4",
   "private": true,
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "prepare": "npm run build:dev",
-    "build:dev": "vite build --mode development",
-    "build:production": "vite build --mode production",
+    "build": "vite build --mode development",
+    "dist": "vite build --mode production",
     "serve": "vite preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },

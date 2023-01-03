@@ -1,24 +1,18 @@
 <template>
 	<div class="checkbox">
-		<label :for="labelFor">
-			<input 
-				:id="labelFor"
-				:name="name"
-				type="checkbox"
-				:checked="checked" 
-				@change="handleChange(value)"
-			>
+		<label :for="id">
+			<input :id="id" :name="name" type="checkbox" :checked="checked" @change="handleChange(value)">
 			<slot></slot>
 		</label>
 	</div>
 </template>
-    
+
 <script setup>
 import { useField } from "vee-validate";
 import { onMounted, toRefs, watch } from "vue";
 
 const props = defineProps({
-	labelFor: {
+	id: {
 		type: String,
 		default: ''
 	},
@@ -39,7 +33,7 @@ const props = defineProps({
 		default: undefined
 	}
 });
-  
+
 const emit = defineEmits(["resetCompleted", "hasError"]);
 
 // Must use `toRef` to make the checkboxes names reactive
@@ -59,10 +53,10 @@ onMounted(() => {
 });
 
 const onReset = () => {
-	if(isReset.value){
+	if (isReset.value) {
 		resetField();
 		emit("resetCompleted");
 	}
 };
-    
+
 </script>

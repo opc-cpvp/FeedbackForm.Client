@@ -29,8 +29,8 @@ steps:
       verbose: false
 
   - task: Npm@1
-    displayName: "npm run build:production"
+    displayName: "npm run dist"
     inputs:
       command: custom
       verbose: false
-      customCommand: "run build:production"
+      customCommand: "run dist"
