@@ -33,7 +33,7 @@
   },
   "errors": {
     "invalidRequest": "An invalid request was made, please try again.",
-    "serverError": "Something went wront, please try again later."
+    "serverError": "Something went wrong, please try again later."
   },
   "fields": {
     "selectOption": "Select an option",
