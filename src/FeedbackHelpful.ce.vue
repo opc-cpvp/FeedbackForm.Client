@@ -209,7 +209,7 @@ const handleResetReasonsCompleted = () => isResetReasons.value = false;
 
 </script>
 
-<style scoped>
+<style>
 @import url("https://www.priv.gc.ca/wet/gcweb-opc/css/theme.min.css");
 @import url("https://www.priv.gc.ca/css/opc-style.css");
 
@@ -249,11 +249,6 @@ form legend {
   margin-bottom: 5px !important;
 }
 
-details #validationSummary span.label {
-  font-size: 100% !important;
-  white-space: normal !important;
-}
-
 aside#feedbackSection details {
   border-color: #b31885;
 }
@@ -274,12 +269,11 @@ aside#feedbackSection form fieldset fieldset {
   margin-left: 30px;
   padding-top: 0px;
 }
-
 aside#feedbackSection form fieldset>div.form-group {
   margin-left: 20px;
 }
 
-aside#feedbackSection form fieldset>div.form-group>label {
+aside#feedbackSection form fieldset>div.form-group div>label {
   font-weight: inherit;
 }
 
@@ -288,7 +282,8 @@ aside#feedbackSection form legend {
   margin-bottom: 5px !important;
 }
 
-h2.modal-title {
-  color: inherit;
+.h5 {
+  color: #b31885;
+  font-weight: 500;
 }
 </style>

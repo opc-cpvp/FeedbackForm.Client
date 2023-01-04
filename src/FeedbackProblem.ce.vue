@@ -183,17 +183,12 @@ const handleResetCommentCompleted = () => isResetComment.value = false;
 
 </script>
 
-<style scoped>
+<style>
 @import url("https://www.priv.gc.ca/wet/gcweb-opc/css/theme.min.css");
 @import url("https://www.priv.gc.ca/css/opc-style.css");
 
 details summary {
   text-align: left;
-}
-
-details #validationSummary span.label {
-  font-size: 100% !important;
-  white-space: normal !important;
 }
 
 form fieldset {
@@ -209,18 +204,6 @@ div#reportAProblem details summary {
   text-align: left;
 }
 
-div#reportAProblem details div#otherReasonComments3,
-div#reportAProblem details #validationSummary2 {
-  display: none;
-  /*default - will be displayed by javascript code */
-}
-
-aside#feedbackSection details #validationSummary1 span.label,
-div#reportAProblem details #validationSummary2 span.label {
-  font-size: 100% !important;
-  white-space: normal !important;
-}
-
 span.redspan {
   color: #d3080c;
 }
@@ -232,5 +215,14 @@ div#reportAProblem form fieldset {
 div#reportAProblem form legend {
   font-size: inherit !important;
   margin-bottom: 5px !important;
+}
+
+div#reportAProblem.btn-default, div#reportAProblem.btn-default:visited {
+  color:#00627e
+}
+
+.h5 {
+  color: #b31885;
+  font-weight: 500;
 }
 </style>
