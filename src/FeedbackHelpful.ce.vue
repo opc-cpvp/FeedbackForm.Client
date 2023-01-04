@@ -9,7 +9,7 @@
             <strong class="required"> ({{ t('form.required') }})</strong>:
           </legend>
           <!-- vee-validate parameters only have to be set on one element with the same name -->
-          <radio-item id="helpfulPageYes" value="1" name="isHelpful" @input="handleIsHelpfulInput"
+          <radio-item id="helpfulPageYes" :value="Answer.YES" name="isHelpful" @input="handleIsHelpfulInput"
             :rules="{ one_of: [1, 2] }">
             {{ t("yes") }}
           </radio-item>
@@ -21,7 +21,7 @@
             </textarea-input>
             <span class="label label-danger">{{ errors.comment }}</span>
           </div>
-          <radio-item id="helpfulPageNo" value="2" name="isHelpful" @input="handleIsHelpfulInput()"
+          <radio-item id="helpfulPageNo" :value="Answer.NO" name="isHelpful" @input="handleIsHelpfulInput()"
             :rules="{ one_of: [1, 2] }">
             {{ t('no') }}
           </radio-item>
@@ -33,32 +33,33 @@
 }})</strong>:
             </legend>
             <!-- vee-validate parameters only have to be set on one element with the same name -->
-            <checkbox-item name="reasons" id="infoHardToUnderstand" value="infoHardToUnderstand"
+            <checkbox-item name="reasons" id="infoHardToUnderstand" :value="Reasons.INFO_HARD_TO_UNDERSTAND"
               :is-reset="isResetReasons" @reset-completed="handleResetReasonsCompleted" @change="handleReasonsChanged()"
               :rules="{ required: true }">
               {{ t("infoHardToUnderstand") }}
             </checkbox-item>
-            <checkbox-item name="reasons" id="infoWrong" value="infoWrong" @change="handleReasonsChanged()">
+            <checkbox-item name="reasons" id="infoWrong" :value="Reasons.INFO_WRONG" @change="handleReasonsChanged()">
               {{ t("infoWrong") }}
             </checkbox-item>
-            <checkbox-item name="reasons" id="helpfulInfoOutdated" value="infoOutdated"
+            <checkbox-item name="reasons" id="helpfulInfoOutdated" :value="Reasons.INFO_OUTDATED"
               @change="handleReasonsChanged()">
               {{ t("infoOutdated") }}
             </checkbox-item>
-            <checkbox-item name="reasons" id="infoNotFound" value="infoNotFound" @change="handleReasonsChanged()">
+            <checkbox-item name="reasons" id="infoNotFound" :value="Reasons.INFO_NOT_FOUND"
+              @change="handleReasonsChanged()">
               {{ t("infoNotFound") }}
             </checkbox-item>
-            <checkbox-item name="reasons" id="helpfulOther" value="other" @change="handleReasonOtherChanged()">
+            <checkbox-item name="reasons" id="helpfulOther" :value="Reasons.OTHER" @change="handleReasonOtherChanged()">
               {{ t("form.other") }}
+              <div class="form-group" v-if="isReasonOtherSelected">
+                <textarea-input name="comment" id="commentOtherNotHelpful" maxLength.number="5"
+                  :rules="{ required: true, max: 750 }">
+                  {{ t("why") }}? {{ t("provideDetails") }} ({{ t("form.max750characters") }})
+                </textarea-input>
+                <span class="label label-danger">{{ errors.comment }}</span>
+              </div>
             </checkbox-item>
             <span class="label label-danger">{{ errors.reasons }}</span>
-            <div class="form-group" v-if="isReasonOtherSelected">
-              <textarea-input name="comment" id="commentOtherNotHelpful" maxLength.number="5"
-                :rules="{ required: true, max: 750 }">
-                {{ t("why") }}? {{ t("provideDetails") }} ({{ t("form.max750characters") }})
-              </textarea-input>
-              <span class="label label-danger">{{ errors.comment }}</span>
-            </div>
           </fieldset>
         </fieldset>
         <!-- Limitation: Can't pass i18n from a custom component to a vue component -->

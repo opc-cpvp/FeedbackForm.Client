@@ -10,33 +10,35 @@
           <fieldset id="reportAProblemInputs">
             <legend class="required">
               <span class="field-name">{{ t("form.selectOptions") }}</span>
-              <strong class="required">({{ t("form.required") }})</strong>:
+              <strong class="required"> ({{ t("form.required") }})</strong>:
             </legend>
             <!-- vee-validate parameters only have to be set on one element with the same name -->
-            <checkbox-item name="reasons" id="pageHasBrokenLinks" value="brokenLinks" @change="handleReasonsChanged"
-              :rules="{ required: true }">
+            <checkbox-item name="reasons" id="pageHasBrokenLinks" :value="Reasons.BROKEN_LINKS"
+              @change="handleReasonsChanged" :rules="{ required: true }">
               {{ t("brokenLinks") }}
             </checkbox-item>
-            <checkbox-item name="reasons" id="pageHasSpellingOrGrammarMistakes" value="spellingOrGrammarMistakes"
-              @change="handleReasonsChanged">
+            <checkbox-item name="reasons" id="pageHasSpellingOrGrammarMistakes"
+              :value="Reasons.SPELLING_OR_GRAMMAR_MISTAKES" @change="handleReasonsChanged">
               {{ t("spellingOrGrammarMistakes") }}
             </checkbox-item>
-            <checkbox-item name="reasons" id="problemInfoOutdated" value="infoOutdated" @change="handleReasonsChanged">
+            <checkbox-item name="reasons" id="problemInfoOutdated" :value="Reasons.INFO_OUTDATED"
+              @change="handleReasonsChanged">
               {{ t("infoWrongOrOutdated") }}
             </checkbox-item>
-            <checkbox-item name="reasons" id="problemOtherReason" value="other" @change="handleReasonOtherChanged">
+            <checkbox-item name="reasons" id="problemOtherReason" :value="Reasons.OTHER"
+              @change="handleReasonOtherChanged">
               {{ t("form.other") }}
-            </checkbox-item>
-            <span class="label label-danger">{{ errors.reasons }}</span>
-            <div v-if="isReasonOtherSelected" class="form-group">
-              <textarea-input name="comment" id="commentHelpful" maxLength.number="750"
-                :rules="{ required: true, max: 750 }" :is-reset="isResetComment"
-                @reset-completed="handleResetCommentCompleted">{{ t("form.specify") }} ({{
+              <div v-if="isReasonOtherSelected" class="form-group">
+                <textarea-input name="comment" id="commentHelpful" maxLength.number="750"
+                  :rules="{ required: true, max: 750 }" :is-reset="isResetComment"
+                  @reset-completed="handleResetCommentCompleted">{{ t("form.specify") }} ({{
     t("form.max750characters")
 }})
-              </textarea-input>
-              <span class="label label-danger">{{ errors.comment }}</span>
-            </div>
+                </textarea-input>
+                <span class="label label-danger">{{ errors.comment }}</span>
+              </div>
+            </checkbox-item>
+            <span class="label label-danger">{{ errors.reasons }}</span>
           </fieldset>
 
           <!-- Limitation: Can't pass i18n from a custom component to a vue component -->
