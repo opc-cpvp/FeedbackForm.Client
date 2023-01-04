@@ -100,12 +100,12 @@
 </template>
 
 <script setup>
-import CheckboxItem from "./shared/CheckboxItem.vue";
-import ErrorSummary from "./shared/ErrorSummary.vue";
-import RadioItem from "./shared/RadioItem.vue";
-import TextareaInput from "./shared/TextareaInput.vue";
-import { Reasons, Answer } from "../const";
-import { setupValidation } from "../validation";
+import CheckboxItem from "./components/CheckboxItem.vue";
+import ErrorSummary from "./components/ErrorSummary.vue";
+import RadioItem from "./components/RadioItem.vue";
+import TextareaInput from "./components/TextareaInput.vue";
+import { Answer, Reasons } from "./constants/responses";
+import { setupValidation } from "./validation";
 import axios from "axios";
 import { setLocale } from "@vee-validate/i18n";
 import { useForm, useFormValues } from "vee-validate";
@@ -119,7 +119,7 @@ setLocale(locale.value);
 
 const props = defineProps({
   contentId: {
-    Number,
+    type: Number,
     default: null,
   },
   versionId: {

@@ -1,7 +1,7 @@
 <template>
 	<div class="checkbox">
 		<label :for="id">
-			<input :id="id" :name="name" type="checkbox" :checked="checked" @change="handleChange(value)">
+			<input :id="id" :name="name" type="checkbox" :checked="checked" @change="handleChange(value)" />
 			<slot></slot>
 		</label>
 	</div>

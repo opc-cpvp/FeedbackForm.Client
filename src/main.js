@@ -1,7 +1,7 @@
 import { defineCustomElement } from 'vue';
-import FeedbackHelpful from './components/FeedbackHelpful.ce.vue';
-import FeedbackProblem from './components/FeedbackProblem.ce.vue';
-import I18nHost from './components/I18nHost.ce.vue';
+import FeedbackHelpful from './FeedbackHelpful.ce.vue';
+import FeedbackProblem from './FeedbackProblem.ce.vue';
+import I18nHost from './I18nHost.ce.vue';
 
 const FeedbackHelpfulElement = defineCustomElement(FeedbackHelpful);
 const FeedbackProblemElement = defineCustomElement(FeedbackProblem);

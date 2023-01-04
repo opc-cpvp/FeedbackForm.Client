@@ -2,8 +2,8 @@
 import { defineComponent, provide, watchEffect } from 'vue'
 import { I18nInjectionKey } from 'vue-i18n'
 import { createI18n } from 'vue-i18n'
-import fr from '../locales/fr.json'
-import en from '../locales/en.json'
+import fr from './locales/fr.json'
+import en from './locales/en.json'
 
 /**
  * create an i18n instance to host for other web components
