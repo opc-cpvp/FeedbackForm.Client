@@ -9,7 +9,7 @@ export default defineConfig(({ mode }) => {
     // vite config
     define: {
       "process.env.NODE_ENV": JSON.stringify(mode),
-      "global": "$"
+      "jquery": "$"
     },
     plugins: [vue()],
     build: {
