@@ -1,7 +1,7 @@
 <template>
-  <aside id="feedbackSection" aria-labelledby="feedbackDetails">
+  <aside id="feedbackSection2" aria-labelledby="feedbackDetails2">
     <details>
-      <summary id="feedbackDetails" class="btn btn-default">{{ t('pageHelpful') }}</summary>
+      <summary id="feedbackDetails2" class="btn btn-default">{{ t('pageHelpful') }}</summary>
       <form @submit="onSubmit" v-if="showForm">
         <fieldset id="feedbackInputs">
           <legend class="required">
@@ -249,11 +249,11 @@ form legend {
   margin-bottom: 5px !important;
 }
 
-aside#feedbackSection details {
+aside#feedbackSection2 details {
   border-color: #b31885;
 }
 
-aside#feedbackSection details summary {
+aside#feedbackSection2 details summary {
   background-color: #b31885;
   border-color: #b31885;
   color: white;
@@ -261,25 +261,29 @@ aside#feedbackSection details summary {
   text-align: left;
 }
 
-aside#feedbackSection form fieldset {
+aside#feedbackSection2 form fieldset {
   border: none;
 }
 
-aside#feedbackSection form fieldset fieldset {
+aside#feedbackSection2 form fieldset fieldset {
   margin-left: 30px;
   padding-top: 0px;
 }
-aside#feedbackSection form fieldset>div.form-group {
+aside#feedbackSection2 form fieldset>div.form-group {
   margin-left: 20px;
 }
 
-aside#feedbackSection form fieldset>div.form-group div>label {
+aside#feedbackSection2 form fieldset>div.form-group div>label {
   font-weight: inherit;
 }
 
-aside#feedbackSection form legend {
+aside#feedbackSection2 form legend {
   font-size: inherit !important;
   margin-bottom: 5px !important;
+}
+
+#feedbackSection2 .btn-primary{
+  background-color: #00627e;
 }
 
 .h5 {

@@ -1,5 +1,5 @@
 <template>
-  <aside aria-labelledby="reportAProblem">
+  <aside aria-labelledby="reportAProblem" id="feedbackSection">
     <details class="brdr-0">
       <summary id="reportAProblem" class="btn btn-default">
         {{ t("reportProblem") }}
@@ -187,10 +187,6 @@ const handleResetCommentCompleted = () => isResetComment.value = false;
 @import url("https://www.priv.gc.ca/wet/gcweb-opc/css/theme.min.css");
 @import url("https://www.priv.gc.ca/css/opc-style.css");
 
-details summary {
-  text-align: left;
-}
-
 form fieldset {
   border: none;
 }
@@ -200,7 +196,7 @@ form legend {
   margin-bottom: 5px !important;
 }
 
-div#reportAProblem details summary {
+#feedbackSection details summary {
   text-align: left;
 }
 
@@ -208,17 +204,25 @@ span.redspan {
   color: #d3080c;
 }
 
-div#reportAProblem form fieldset {
+#feedbackSection form fieldset {
   border: none;
 }
 
-div#reportAProblem form legend {
+#feedbackSection form legend {
   font-size: inherit !important;
   margin-bottom: 5px !important;
 }
 
-div#reportAProblem.btn-default, div#reportAProblem.btn-default:visited {
+#reportAProblem.btn-default, #reportAProblem.btn-default:visited {
   color:#00627e
+}
+
+#feedbackSection .btn-primary {
+  background-color:#00627e
+}
+
+#reportAProblem {
+  text-align: left;
 }
 
 .h5 {
