@@ -9,10 +9,15 @@ export default defineConfig(({ mode }) => {
     // vite config
     define: {
       "process.env.NODE_ENV": JSON.stringify(mode),
-      "jquery": "$"
     },
     plugins: [vue()],
     build: {
+      rollupOptions:{
+        external: ["jquery"],
+        output: {
+          $: "$",
+        }
+      },
       sourcemap: sourceMaps,
       lib: {
         entry: resolve(__dirname, "src/main.js"),
