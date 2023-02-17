@@ -35,7 +35,7 @@ const props = defineProps({
 	},
 	maxLength: {
 		type: Number,
-		default: 5
+		default: 750
 	},
 	isReset: {
 		type: Boolean,
