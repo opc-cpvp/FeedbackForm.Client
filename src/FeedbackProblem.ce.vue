@@ -9,21 +9,21 @@
         <form @submit="onSubmit" v-if="showForm">
           <fieldset id="reportAProblemInputs">
             <legend class="required">
-              <span class="field-name">{{ t("form.selectOptions") }}</span>
-              <strong class="required"> ({{ t("form.required") }})</strong>:
+              <span class="field-name">{{ t("selectOptions") }}</span>
+              <strong class="required"> ({{ t("required") }})</strong>{{ t("punctuation.colon") }}
             </legend>
             <!-- vee-validate parameters only have to be set on one element with the same name -->
             <checkbox-item name="reasons" id="pageHasBrokenLinks" :value="Reasons.BROKEN_LINKS"
               @change="handleReasonsChanged" :rules="{ required: true }">
-              {{ t("brokenLinks") }}
+              {{ t("form.brokenLinks") }}
             </checkbox-item>
             <checkbox-item name="reasons" id="pageHasSpellingOrGrammarMistakes"
               :value="Reasons.SPELLING_OR_GRAMMAR_MISTAKES" @change="handleReasonsChanged">
-              {{ t("spellingOrGrammarMistakes") }}
+              {{ t("form.spellingOrGrammarMistakes") }}
             </checkbox-item>
             <checkbox-item name="reasons" id="problemInfoOutdated" :value="Reasons.INFO_OUTDATED"
               @change="handleReasonsChanged">
-              {{ t("infoWrongOrOutdated") }}
+              {{ t("form.infoWrongOrOutdated") }}
             </checkbox-item>
             <checkbox-item name="reasons" id="problemOtherReason" :value="Reasons.OTHER"
               @change="handleReasonOtherChanged">
@@ -31,9 +31,7 @@
               <div v-if="isReasonOtherSelected" class="form-group">
                 <textarea-input name="comment" id="commentHelpful" maxLength.number="750"
                   :rules="{ required: true, max: 750 }" :is-reset="isResetComment"
-                  @reset-completed="handleResetCommentCompleted">{{ t("form.specify") }} ({{
-    t("form.max750characters")
-}})
+                  @reset-completed="handleResetCommentCompleted">{{ t("commentSpecifyDetails") }}
                 </textarea-input>
                 <span class="label label-danger">{{ errors.comment }}</span>
               </div>
@@ -71,7 +69,7 @@
         </form>
         <div v-if="submitSuccessful" id="feedbackSuccess">
           <div>
-            <h2 class="h5">{{ t('confirmation.thankYouForFeedback') }}!</h2>
+            <h2 class="h5">{{ t('confirmation.thankYouForHelp') }}!</h2>
             <p>{{ t('contact.noReply') }}. {{ t('contact.forEnquiries') }} <a
                 :href="`${websiteBasePath}${t('contact.opcContactLink')}`">{{ t('contact.contactOpc') }}</a>.</p>
           </div>
@@ -155,7 +153,7 @@ const onSubmit = handleSubmit(values => {
       submitSuccessful.value = true;
       submitError.value = "";
     }).catch((err) => {
-      if (err.response?.status === 500) {
+      if (err.response?.status === 400) {
         submitError.value = t('errors.invalidRequest');
       } else {
         submitError.value = t('errors.serverError');

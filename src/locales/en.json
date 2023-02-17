@@ -1,18 +1,16 @@
 {
   "pageHelpful": "Was this page helpful?",
+  "reportProblem": "Report a problem or mistake on this page",
   "selectOne": "Please select one",
   "yes": "Yes",
   "no": "No",
   "why": "Why",
-  "provideDetails": "Please provide details",
-  "infoHardToUnderstand": "The information is hard to understand",
-  "infoWrong": "The information is wrong",
-  "infoOutdated": "The information is outdated",
-  "infoNotFound": "I can't find the information I'm looking for",
-  "reportProblem": "Report a problem or mistake on this page",
-  "brokenLinks": "There are broken links",
-  "spellingOrGrammarMistakes": "The page has spelling or grammar mistakes",
-  "infoWrongOrOutdated": "The information is wrong or outdated",
+  "commentProvideAdditionalDetails": "Please provide details (maximum of 750 characters):",
+  "commentSpecifyDetails": "Please specify (maximum of 750 characters):",
+  "selectOption": "Select an option",
+  "selectAllThatApply": "Select all that apply",
+  "required": "required",
+  "selectOptions": "Please select all that apply",
   "submissionInformation": {
     "note": "Note",
     "noPersonalInfo": "Do not include any personal information",
@@ -23,7 +21,8 @@
     "termsOfUse": "terms and conditions of use"
   },
   "confirmation": {
-    "thankYouForFeedback": "Thank you for your feedback"
+    "thankYouForFeedback": "Thank you for your feedback",
+    "thankYouForHelp": "Thank you for your help"
   },
   "contact": {
     "forEnquiries": "For enquiries, please",
@@ -35,17 +34,19 @@
     "invalidRequest": "An invalid request was made, please try again.",
     "serverError": "Something went wrong, please try again later."
   },
-  "fields": {
-    "selectOption": "Select an option",
-    "selectAllThatApply": "Select all that apply",
-    "comment": "Please specify"
-  },
   "form": {
-    "required": "required",
-    "max750characters": "maximum 750 characters",
-    "selectOptions": "Please select all that apply",
+    "infoHardToUnderstand": "The information is hard to understand.",
+    "infoWrong": "The information is wrong.",
+    "infoOutdated": "The information is outdated.",
+    "infoNotFound": "I can't find the information I'm looking for.",
+    "reportProblem": "Report a problem or mistake on this page",
+    "brokenLinks": "There are broken links.",
+    "spellingOrGrammarMistakes": "The page has spelling or grammar mistakes.",
+    "infoWrongOrOutdated": "The information is wrong or outdated.",
     "other": "Other",
-    "specify": "Please specify",
     "submit": "Submit"
+  },
+  "punctuation": {
+    "colon": ":"
   }
 }

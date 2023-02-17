@@ -1,18 +1,16 @@
 {
   "pageHelpful": "Est-ce que cette information vous a été utile?",
+  "reportProblem": "Signaler un problème ou une erreur sur cette page",
   "selectOne": "Veuillez sélectionner une option",
   "yes": "Oui",
   "no": "Non",
   "why": "Pourquoi",
-  "provideDetails": "Veuillez préciser",
-  "infoHardToUnderstand": "L'information est difficile à comprendre",
-  "infoWrong": "L'information est erronée",
-  "infoOutdated": "L'information n'est plus à jour",
-  "infoNotFound": "Je ne trouve pas l'information que je cherche",
-  "reportProblem": "Signaler un problème ou une erreur sur cette page",
-  "brokenLinks": "Il y a des hyperliens brisés",
-  "spellingOrGrammarMistakes": "Il y a des erreurs d'orthographe ou de grammaire",
-  "infoWrongOrOutdated": "L'information est erronée ou n'est plus à jour",
+  "commentProvideAdditionalDetails": "Veuillez préciser (maximum de 750 caractères) :",
+  "commentSpecifyDetails": "Veuillez préciser (maximum of 750 characters) :",
+  "required": "obligatoire",
+  "selectOptions": "Veuillez cocher toutes les réponses pertinentes",
+  "selectOption": "Sélectionner une option",
+  "selectAllThatApply": "Sélectionner les réponses pertinentes",
   "submissionInformation": {
     "note": "Remarque",
     "noPersonalInfo": "N'inscrivez aucun renseignement personnel",
@@ -23,7 +21,8 @@
     "termsOfUse": "conditions d'utilisation"
   },
   "confirmation": {
-    "thankYouForFeedback": "Merci de votre rétroaction"
+    "thankYouForFeedback": "Merci de votre rétroaction",
+    "thankYouForHelp": "Merci de votre aide"
   },
   "contact": {
     "forEnquiries": "Pour toute question, veuillez",
@@ -35,18 +34,19 @@
     "invalidRequest": "Une requête invalide a été effectuée. Veuillez essayer de nouveau.",
     "serverError": "Une erreur est survenue, s'il vous plait réessayer de nouveau plus tard."
   },
-  "fields": {
-    "selectOption": "Sélectionner une option",
-    "selectAllThatApply": "Sélectionner les réponses pertinentes",
-    "comment": "Veuillez préciser"
-  },
   "form": {
-    "required": "obligatoire",
-    "provideDetails": "Pourquoi? Veuillez préciser",
-    "max750characters": "maximum de 750 caractères",
-    "selectOptions": "Veuillez cocher toutes les réponses pertinentes",
+    "infoHardToUnderstand": "L'information est difficile à comprendre.",
+    "infoWrong": "L'information est erronée.",
+    "infoOutdated": "L'information n'est plus à jour.",
+    "infoNotFound": "Je ne trouve pas l'information que je cherche.",
+    "reportProblem": "Signaler un problème ou une erreur sur cette page.",
+    "brokenLinks": "Il y a des hyperliens brisés.",
+    "spellingOrGrammarMistakes": "Il y a des erreurs d'orthographe ou de grammaire.",
+    "infoWrongOrOutdated": "L'information est erronée ou n'est plus à jour.",
     "other": "Autre",
-    "specify": "Veuillez préciser",
     "submit": "Soumettre"
+  },
+  "punctuation": {
+    "colon": " :"
   }
 }

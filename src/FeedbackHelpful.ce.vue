@@ -6,7 +6,7 @@
         <fieldset id="feedbackInputs">
           <legend class="required">
             <span class="field-name">{{ t('selectOne') }}</span>
-            <strong class="required"> ({{ t('form.required') }})</strong>:
+            <strong class="required"> ({{ t('required') }})</strong>{{ t('punctuation.colon') }}
           </legend>
           <!-- vee-validate parameters only have to be set on one element with the same name -->
           <radio-item id="helpfulPageYes" :value="Answer.YES" name="isHelpful" @input="handleIsHelpfulInput"
@@ -17,7 +17,7 @@
             <textarea-input name="comment" id="commentHelpful" maxLength.number="750"
               :rules="{ required: true, max: 750 }" :is-reset="isResetComment"
               @reset-completed="handleResetCommentCompleted">
-              {{ t("why") }}? {{ t("provideDetails") }} ({{ t("form.max750characters") }})
+              {{ t("why") }}? {{ t("commentProvideAdditionalDetails") }}
             </textarea-input>
             <span class="label label-danger">{{ errors.comment }}</span>
           </div>
@@ -28,33 +28,31 @@
           <span class="label label-danger">{{ errors.isHelpful }}</span>
           <fieldset id="feedbackNoFieldset" v-if="getIsHelpful == Answer.NO">
             <legend class="required">
-              <span class="field-name">{{ t("form.selectOptions") }}</span><strong class="required"> ({{
-    t("form.required")
-}})</strong>:
+              <span class="field-name">{{ t("why") }}? {{ t("selectOptions") }}</span><strong class="required"> ({{ t("required") }})</strong>{{ t('punctuation.colon') }}
             </legend>
             <!-- vee-validate parameters only have to be set on one element with the same name -->
             <checkbox-item name="reasons" id="infoHardToUnderstand" :value="Reasons.INFO_HARD_TO_UNDERSTAND"
               :is-reset="isResetReasons" @reset-completed="handleResetReasonsCompleted" @change="handleReasonsChanged()"
               :rules="{ required: true }">
-              {{ t("infoHardToUnderstand") }}
+              {{ t("form.infoHardToUnderstand") }}
             </checkbox-item>
             <checkbox-item name="reasons" id="infoWrong" :value="Reasons.INFO_WRONG" @change="handleReasonsChanged()">
-              {{ t("infoWrong") }}
+              {{ t("form.infoWrong") }}
             </checkbox-item>
             <checkbox-item name="reasons" id="helpfulInfoOutdated" :value="Reasons.INFO_OUTDATED"
               @change="handleReasonsChanged()">
-              {{ t("infoOutdated") }}
+              {{ t("form.infoOutdated") }}
             </checkbox-item>
             <checkbox-item name="reasons" id="infoNotFound" :value="Reasons.INFO_NOT_FOUND"
               @change="handleReasonsChanged()">
-              {{ t("infoNotFound") }}
+              {{ t("form.infoNotFound") }}
             </checkbox-item>
             <checkbox-item name="reasons" id="helpfulOther" :value="Reasons.OTHER" @change="handleReasonOtherChanged()">
               {{ t("form.other") }}
               <div class="form-group" v-if="isReasonOtherSelected">
-                <textarea-input name="comment" id="commentOtherNotHelpful" maxLength.number="5"
+                <textarea-input name="comment" id="commentOtherNotHelpful" maxLength.number="750"
                   :rules="{ required: true, max: 750 }">
-                  {{ t("why") }}? {{ t("provideDetails") }} ({{ t("form.max750characters") }})
+                  {{ t("commentSpecifyDetails") }}
                 </textarea-input>
                 <span class="label label-danger">{{ errors.comment }}</span>
               </div>
