@@ -1,62 +1,33 @@
 {
   "name": "feedbackform.client",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "private": true,
+  "type": "module",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --mode development --inline-vue",
-    "build:staging": "vue-cli-service build --mode staging --inline-vue",
-    "build:production": "vue-cli-service build --inline-vue",
-    "lint": "vue-cli-service lint",
-    "prepare": "npm run build:production"
+    "dev": "vite",
+    "build": "vite build --mode development",
+    "dist:staging": "vite build --mode staging",
+    "dist": "vite build --mode production",
+    "serve": "vite preview",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
-    "@hapi/hoek": "^8.5.1",
-    "axios": "^0.19.2",
-    "core-js": "^3.6.4",
-    "document-register-element": "^1.14.3",
-    "vee-validate": "^3.2.5",
-    "vue": "^2.6.10",
-    "vue-axios": "^2.1.5",
-    "vue-custom-element": "^3.2.12",
-    "vue-i18n": "^8.15.4"
+    "@vee-validate/i18n": "^4.7.0",
+    "@vee-validate/rules": "^4.7.0",
+    "axios": "^0.27.2",
+    "core-js": "^3.25.5",
+    "vee-validate": "^4.6.9",
+    "vue": "^3.2.41",
+    "vue-i18n": "^9.2.2"
   },
   "devDependencies": {
-    "@babel/cli": "^7.8.4",
-    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.8.3",
-    "@kazupon/vue-i18n-loader": "^0.5.0",
-    "@vue/cli-plugin-babel": "^4.1.0",
-    "@vue/cli-plugin-eslint": "^4.1.0",
-    "@vue/cli-service": "^4.1.0",
-    "babel-eslint": "^10.0.3",
-    "eslint": "^6.8.0",
-    "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.20.1",
-    "eslint-plugin-vue": "^6.1.2",
-    "vue-loader": "^15.8.3",
-    "vue-template-compiler": "^2.6.11"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
-    "rules": {},
-    "parserOptions": {
-      "parser": "babel-eslint"
-    }
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions"
-  ],
-  "description": "## Project setup ``` npm install ```",
-  "main": "babel.config.js",
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+    "@babel/eslint-parser": "^7.19.1",
+    "@vitejs/plugin-legacy": "^2.3.0",
+    "@vitejs/plugin-vue": "^3.2.0",
+    "eslint": "^8.23.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-vue": "^9.6.0",
+    "prettier": "^2.7.1",
+    "vite": "^3.2.1"
+  }
 }
