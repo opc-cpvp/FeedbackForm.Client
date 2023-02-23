@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "prepare": "npm run build",
+    "prepare": "npm run dist",
     "build": "vite build --mode development",
     "dist:staging": "vite build --mode staging",
     "dist": "vite build --mode production",
