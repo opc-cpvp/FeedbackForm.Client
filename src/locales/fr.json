@@ -6,7 +6,7 @@
   "no": "Non",
   "why": "Pourquoi",
   "commentProvideAdditionalDetails": "Veuillez préciser (maximum de 750 caractères) :",
-  "commentSpecifyDetails": "Veuillez préciser (maximum of 750 characters) :",
+  "commentSpecifyDetails": "Veuillez préciser (maximum de 750 caractères) :",
   "required": "obligatoire",
   "selectOptions": "Veuillez cocher toutes les réponses pertinentes",
   "selectOption": "Sélectionner une option",
@@ -43,7 +43,7 @@
     "brokenLinks": "Il y a des hyperliens brisés.",
     "spellingOrGrammarMistakes": "Il y a des erreurs d'orthographe ou de grammaire.",
     "infoWrongOrOutdated": "L'information est erronée ou n'est plus à jour.",
-    "other": "Autre",
+    "other": "Autre.",
     "submit": "Soumettre"
   },
   "punctuation": {
