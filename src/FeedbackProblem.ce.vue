@@ -104,7 +104,7 @@ const props = defineProps({
     default: null,
   },
   versionId: {
-    type: String,
+    type: Number,
     default: null,
   },
   feedbackApi: {
