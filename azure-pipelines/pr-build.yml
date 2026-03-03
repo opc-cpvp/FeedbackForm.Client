@@ -15,7 +15,7 @@ pr:
       - src/*
 
 pool:
-  vmImage: "windows-2019"
+  vmImage: "windows-2025"
 
 steps:
   - task: NodeTool@0
